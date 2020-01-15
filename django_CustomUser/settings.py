@@ -25,7 +25,7 @@ SECRET_KEY = '&1_6gk(t9@^yox#z5rqq8y35!ri_3k(v&4dj!&s6ppw$ao5g2y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -40,10 +40,18 @@ INSTALLED_APPS = [
 
     # My Custom User App
     'User',
+    'rest_framework',
+    'rest_framework.authtoken',
 ]
 
 # Should mention that you're using custom django User model.
 AUTH_USER_MODEL = "User.User"
+
+REST_FRAMEWORK = {
+    # 'DEFAULT_AUTHENTICATION_CLASSES': [
+    #     'rest_framework.authentication.TokenAuthentication',
+    # ],
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
