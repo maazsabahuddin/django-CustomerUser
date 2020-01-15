@@ -10,7 +10,7 @@ from rest_framework.authtoken.models import Token
 from .models import User
 
 
-class Register(APIView):
+class Register(generics.GenericAPIView):
 
     permission_classes = (AllowAny,)
 
